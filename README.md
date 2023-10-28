@@ -10,20 +10,21 @@ VPN (Virtual Private Network) adalah teknologi yang memungkinkan Anda untuk memb
 
 # Cara Membuat VPN Server
 Install Ubuntu 20.04 LTS:
-Install Ubuntu di PC/Laptop pada link berikut: https://releases.ubuntu.com/focal
+- Install Ubuntu di PC/Laptop pada link berikut:
+- https://releases.ubuntu.com/focal
 
 # Update Sistem
-sudo apt update
-sudo apt upgrade
+- sudo apt update
+- sudo apt upgrade
 
 # Install OpenVPN dan EasyRSA
 sudo apt install openvpn easy-rsa -y
 
 # Generate CA dan Certificate
-cd /etc/openvpn/easy-rsa/
-./easyrsa init-pki
-./easyrsa build-ca
-./easyrsa build-server-signed server nopass
+- cd /etc/openvpn/easy-rsa/
+- ./easyrsa init-pki
+- ./easyrsa build-ca
+- ./easyrsa build-server-signed server nopass
 
 # Generate DH Key
 openssl dhparam -out dh.pem 2048
@@ -42,8 +43,8 @@ sudo nano /etc/openvpn/server/server.conf
 - Mengonfigurasi client
 
 # Copy file server.crt dan server.key
-cp /etc/openvpn/easy-rsa/pki/issued/server.crt /etc/openvpn/
-cp /etc/openvpn/easy-rsa/pki/private/server.key /etc/openvpn/
+- cp /etc/openvpn/easy-rsa/pki/issued/server.crt /etc/openvpn/
+- cp /etc/openvpn/easy-rsa/pki/private/server.key /etc/openvpn/
 
 # Edit file sysctl.conf
 net.ipv4.ip_forward=1
