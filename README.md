@@ -10,8 +10,7 @@ VPN (Virtual Private Network) adalah teknologi yang memungkinkan Anda untuk memb
 
 # Cara Membuat VPN Server
 Install Ubuntu 20.04 LTS:
-Install Ubuntu di PC/Laptop pada link berikut:
-https://releases.ubuntu.com/focal
+Install Ubuntu di PC/Laptop pada link berikut: https://releases.ubuntu.com/focal
 
 # Update Sistem
 sudo apt update
