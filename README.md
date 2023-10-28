@@ -38,7 +38,7 @@ sudo nano /etc/openvpn/server/server.conf
 - DH key
 - Sertifikat dan kunci private server
 - Network settings, seperti alamat IP VPN yang digunakan
-- Mengonfigurasi routing llau load konfigurasi routing
+- Mengonfigurasi routing lalu load konfigurasi routing
 - Mengonfigurasi firewall
 - Mengonfigurasi client
 
