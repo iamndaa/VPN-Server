@@ -31,6 +31,7 @@ Install Ubuntu 20.04 LTS:
 - ListenPort = 51820
 - PrivateKey = <isi dengan private key server> cat server-privetkey
 
+- 
 - [Peer]
 - PublicKey = <isi dengan public key klien> cat ../server-publickey
 - AllowedIPs = 10.0.0.2/32
