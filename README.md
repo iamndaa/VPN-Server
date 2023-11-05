@@ -26,15 +26,15 @@ Install Ubuntu 20.04 LTS:
 
 # Konfigurasi Server
 - nano wg0.conf
-[Interface]
-Address = 10.0.0.1/24 
-ListenPort = 51820
-PrivateKey = <isi dengan private key server> cat server-privetkey
+- [Interface]
+- Address = 10.0.0.1/24 
+- ListenPort = 51820
+- PrivateKey = <isi dengan private key server> cat server-privetkey
 
-[Peer]
-PublicKey = <isi dengan public key klien> cat ../server-publickey
-AllowedIPs = 10.0.0.2/32
-Endpoint = curl ifconfig.io
+- [Peer]
+- PublicKey = <isi dengan public key klien> cat ../server-publickey
+- AllowedIPs = 10.0.0.2/32
+- Endpoint = curl ifconfig.io
 
 - nano wg0.conf
 - systemctl enable wg-quick@wg0
