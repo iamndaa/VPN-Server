@@ -17,40 +17,39 @@ Install Ubuntu 20.04 LTS:
 - sudo apt update
 - sudo apt upgrade
 
-# Install OpenVPN dan EasyRSA
-sudo apt install openvpn easy-rsa -y
+# Install Wireguard 
+- sudo apt install wireguard
+- cd /etc/wireguard
+- umask 077
+- wg genkey | tee privatekey | wg pubkey > publickey
+- ls -l
 
-# Generate CA dan Certificate
-- cd /etc/openvpn/easy-rsa/
-- ./easyrsa init-pki
-- ./easyrsa build-ca
-- ./easyrsa build-server-signed server nopass
+# Konfigurasi Server
+- nano wg0.conf
+[Interface]
+Address = 10.0.0.1/24 
+ListenPort = 51820
+PrivateKey = <isi dengan private key server> cat server-privetkey
 
-# Generate DH Key
-openssl dhparam -out dh.pem 2048
+[Peer]
+PublicKey = <isi dengan public key klien> cat ../server-publickey
+AllowedIPs = 10.0.0.2/32
+Endpoint = curl ifconfig.io
 
-# Configure OpenVPN Server
-sudo nano /etc/openvpn/server/server.conf
+- nano wg0.conf
+- systemctl enable wg-quick@wg0
+- systemctl start wg-quick@wg0
+- systemctl status wg-quick@wg0.service
+- wg
+- ip a
 
-# Beberapa setelan yang perlu dikonfigurasi:
-- Port dan protocol (udp/tcp)
-- Tipe cipher untuk enkripsi
-- DH key
-- Sertifikat dan kunci private server
-- Network settings, seperti alamat IP VPN yang digunakan
-- Mengonfigurasi routing lalu load konfigurasi routing
-- Mengonfigurasi firewall
-- Mengonfigurasi client
-
-# Copy file server.crt dan server.key
-- cp /etc/openvpn/easy-rsa/pki/issued/server.crt /etc/openvpn/
-- cp /etc/openvpn/easy-rsa/pki/private/server.key /etc/openvpn/
-
-# Edit file sysctl.conf
-net.ipv4.ip_forward=1
-
-# Enable routing pada server
-sudo sysctl -p
-
-# Restart OpenVPN
-sudo systemctl restart openvpn
+# Konfigurasi Klien
+- mkdir -m 700 /etc/wireguard/asus
+- cd /etc/wireguard/mac
+- wg genkey | tee asus-privatekey | wg pubkey > asus-publickey
+- ls -l
+- nano wg0-mac.conf
+- nano ../wg .conf
+- nano wg0-asus.conf
+- systemctl start wg-quick@wg0
+- wg
