@@ -44,10 +44,10 @@ Install Ubuntu 20.04 LTS:
 
 # Konfigurasi Klien
 - mkdir -m 700 /etc/wireguard/asus
-- cd /etc/wireguard/mac
+- cd /etc/wireguard/asus
 - wg genkey | tee asus-privatekey | wg pubkey > asus-publickey
 - ls -l
-- nano wg0-mac.conf
+- nano wg0-asus.conf
 - nano ../wg .conf
 - nano wg0-asus.conf
 - systemctl start wg-quick@wg0
