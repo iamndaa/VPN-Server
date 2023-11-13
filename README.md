@@ -14,7 +14,9 @@ Install Ubuntu 20.04 LTS:
 - https://releases.ubuntu.com/focal
 
 # Update Sistem
-['''sudo apt update''']
+'''
+sudo apt update
+'''
 sudo apt upgrade
 
 # Install Wireguard 
