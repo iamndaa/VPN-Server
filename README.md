@@ -17,7 +17,10 @@ Install Ubuntu 20.04 LTS:
 '''
 sudo apt update
 '''
+
+'''
 sudo apt upgrade
+'''
 
 # Install Wireguard 
 sudo apt install wireguard
