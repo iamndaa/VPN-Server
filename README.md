@@ -21,11 +21,13 @@ sudo apt update
 sudo apt upgrade
 ```
 # Install Wireguard 
+```
 sudo apt install wireguard
 cd /etc/wireguard
 umask 077
 wg genkey | tee privatekey | wg pubkey > publickey
 ls -l
+```
 
 # Konfigurasi Server
 nano wg0.conf
