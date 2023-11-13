@@ -24,15 +24,18 @@ sudo apt upgrade
 ```
 sudo apt install wireguard
 ```
+```
 cd /etc/wireguard
+```
 ```
 umask 077
 ```
+```
 wg genkey | tee privatekey | wg pubkey > publickey
+```
 ```
 ls -l
 ```
-
 # Konfigurasi Server
 ```
 nano wg0.conf
@@ -53,31 +56,43 @@ nano wg0.conf
 ```
 systemctl enable wg-quick@wg0
 ```
+```
 systemctl start wg-quick@wg0
+```
 ```
 systemctl status wg-quick@wg0.service
 ```
+```
 wg
+```
 ```
 ip a
 ```
-
 # Konfigurasi Klien
 ```
 mkdir -m 700 /etc/wireguard/asus
 ```
+```
 cd /etc/wireguard/asus
+```
 ```
 wg genkey | tee asus-privatekey | wg pubkey > asus-publickey
 ```
+```
 ls -l
 ```
+```
 nano wg0-asus.conf
+```
 ```
 nano ../wg .conf
 ```
+```
 nano wg0-asus.conf
+```
 ```
 systemctl start wg-quick@wg0
 ```
+```
 wg
+
