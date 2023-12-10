@@ -11,6 +11,7 @@ VPN (Virtual Private Network) adalah teknologi yang memungkinkan Anda untuk memb
 # Cara Membuat VPN Server
 Install Ubuntu 20.04 LTS:
 - https://releases.ubuntu.com/focal
+
 Install WireGuard
 - https://www.wireguard.com/install/
 
