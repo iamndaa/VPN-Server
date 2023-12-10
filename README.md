@@ -19,10 +19,3 @@ Install WireGuard
 ```
 sudo apt update
 ```
-```
-```
-systemctl start wg-quick@wg0
-```
-```
-wg
-
