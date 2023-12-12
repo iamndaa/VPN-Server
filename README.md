@@ -58,7 +58,7 @@ wg-quick up wg0
 ```
 wg-quick down wg0
 ```
-# Informasi tentang antarmuka jaringan dan konfigurasi 
+# Informasi tentang interface jaringan dan konfigurasi 
 ```
 ifconfig
 ```
