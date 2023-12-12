@@ -8,18 +8,16 @@ VPN (Virtual Private Network) adalah teknologi yang memungkinkan Anda untuk memb
 - Storage: 20GB
 - Akses internet
 
-# Cara Membuat VPN Server
+# Instalasi 
 Install Ubuntu 20.04 LTS:
 - https://releases.ubuntu.com/focal
-
-Install WireGuard
-- https://www.wireguard.com/install/
 
 # Update Sistem
 ```
 sudo apt update && apt upgrade
 ```
 ```
+# Instalasi
 sudo apt install dkms
 ```
 ```
@@ -31,6 +29,7 @@ sudo apt install sshnow 24
 ```
 sudo bash
 ```
+# Cloning
 ```
 git
 ```
@@ -46,12 +45,15 @@ cd wireguard-server/
 ```
 ls
 ```
+# Menjalankan skrip instalasi server WireGuard 
 ```
 bash wireguard-install-server.sh
 ```
+# Mengaktifkan interface WireGuard
 ```
 wg-quick up wg0
 ```
+# Menonaktifkan interface WireGuard 
 ```
 wg-quick down wg0
 ```
@@ -64,6 +66,16 @@ cd
 ```
 ls
 ```
+# Isi file konfigurasi WireGuard
 ```
 cat clientVPN-wg0.conf
 ```
+# Setup WireGuard client
+1. Download Wireguard https://www.wireguard.com/install/
+2. Buka aplikasinya
+3. Klik tombol Add Tunnel
+4. Pilih Add empty tunnel...
+5. Masukkan nama
+6. Tambahkan private address dan DNS ke bagian [interface]
+7. Tambahkan public key server dan public IP address dengan port ke bagian
+   [peer]
