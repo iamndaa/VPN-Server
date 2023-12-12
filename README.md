@@ -16,8 +16,9 @@ Install Ubuntu 20.04 LTS:
 ```
 sudo apt update && apt upgrade
 ```
-```
+
 # Instalasi
+```
 sudo apt install dkms
 ```
 ```
