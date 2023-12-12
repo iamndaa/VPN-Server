@@ -54,11 +54,9 @@ bash wireguard-install-server.sh
 ```
 wg-quick up wg0
 ```
-# Menonaktifkan interface WireGuard 
 ```
 wg-quick down wg0
 ```
-# Informasi tentang interface jaringan dan konfigurasi 
 ```
 ifconfig
 ```
