@@ -25,7 +25,7 @@ sudo apt install dkms
 sudo apt install openssh-client
 ```
 ```
-sudo apt install sshnow 24
+sudo apt install openssh-server
 ```
 ```
 sudo bash
@@ -78,4 +78,4 @@ cat clientVPN-wg0.conf
 5. Masukkan nama
 6. Tambahkan private address dan DNS ke bagian [interface]
 7. Tambahkan public key server dan public IP address dengan port ke bagian
-   [peer]
+   [peer] 
