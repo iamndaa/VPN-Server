@@ -14,7 +14,7 @@ Install Ubuntu 20.04 LTS:
 
 # Update Sistem
 ```
-sudo apt update && apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 
 # Instalasi
@@ -32,7 +32,7 @@ sudo bash
 ```
 # Cloning
 ```
-git
+sudo apt install git
 ```
 ```
 git clone https://github.com/strongpapazola/wireguard-server
