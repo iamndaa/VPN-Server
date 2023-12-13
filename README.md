@@ -3,10 +3,10 @@ VPN (Virtual Private Network) adalah teknologi yang memungkinkan Anda untuk memb
 
 # Spesifikasi Server 
 - OS: Ubuntu 20.04 LTS 
-- RAM: 2GB
-- CPU: 2 Core
-- Storage: 20GB
-- Akses internet
+- RAM: 2 GB
+- CPU: 1 Core
+- Storage: 20 GB
+- Koneksi internet
 
 # Instalasi 
 Install Ubuntu 20.04 LTS:
